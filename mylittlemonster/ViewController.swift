@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     //IBOutlets
     @IBOutlet weak var monsterImg: UIImageView!
+    @IBOutlet weak var foodImg: DragImg!
+    @IBOutlet weak var heartImg: DragImg!
     
     
     override func viewDidLoad() {
@@ -25,7 +27,7 @@ class ViewController: UIViewController {
             imgArray.append(img!)
         }
         
-        //set the animation to the monster ImageView
+        //set the animation for the monster ImageView
         monsterImg.animationImages = imgArray
         
         //set the animation duration for the monster
@@ -34,10 +36,13 @@ class ViewController: UIViewController {
         //when repeat count is 0 it will always repeat
         monsterImg.animationRepeatCount = 0
         
+        //start the monster animation
         monsterImg.startAnimating()
+        
+        
+        
     }
-
-
+    
 
 }
 
